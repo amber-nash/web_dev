@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+doctor_list = [
+  [ "Jeremy Molar", "Orthodontic Surgery" ],
+  [ "Francine Fang", "Pediatric Orthodontics" ],
+  [ "Millie Smilez", "Geriactic Orthodontist" ],
+  [ "Robert Grin", "Orthodontist" ]
+]
+
+doctor_list.each do |name, specialty|
+  Doctor.create( name: name, specialty: specialty )
+end
