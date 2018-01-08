@@ -12,8 +12,10 @@ gem 'rails', '~> 5.0.6'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-# Use Less for stylesheets
-gem 'less-rails-bootstrap'
+# Use Sass for stylesheets for most recent Bootstrap release
+gem 'bootstrap', '~> 4.0.0.beta3'
+# Use sprockets-rails for Bootstrap config
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Use Ruby Racer for JavaScript runtime
 gem 'therubyracer'
 # Use autoprefixer to add proper vendor prefixes to CSS
