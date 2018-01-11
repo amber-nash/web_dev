@@ -31,12 +31,12 @@
           <h2 class="modal-header">Contact Us</h2>
           <div class="reg-login-form">
             <%= form_for @user do |f| %>
-               <%= f.label :name %><br>
-               <%= f.text_field :name %><br>
+               <%= f.label :name %> <br>
+               <%= f.text_field :name, placeholder: "Full Name" %><br>
                <%= f.label :email %><br>
-               <%= f.text_field :email %><br>
+               <%= f.text_field :email , placeholder: "name@name.com"%><br>
                <%= f.label :phone %><br>
-               <%= f.text_field :phone %><br>
+               <%= f.text_field :phone, placeholder: "XXX-XXX-XXXX" %><br>
                <%= f.label :password %><br>
                <%= f.password_field :password %><br>
                <%= f.label :password_confirmation %><br>
