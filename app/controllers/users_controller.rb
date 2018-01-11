@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to root_path
     end
+  end
 
 
 private
