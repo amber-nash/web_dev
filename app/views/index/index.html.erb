@@ -1,58 +1,182 @@
+<!-- TOP BAR -->
 <section id="top-bar">
   <%= image_tag("igniter-logo-white.png", id: "top-bar-logo", class: "img-responsive center-block") %>
 </section>
 
+<!-- CAROUSEL -->
 <div id="homepageCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#homepageCarousel" data-slide-to="1"></li>
-    <li data-target="#homepageCarousel" data-slide-to="2"></li>
-  </ol>
+
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag("autumn-goodman.jpg", class: "d-block img-fluid", alt: "Woman smiling") %>
-      <div class="carousel-caption d-none d-md-block">
-        <h3 id="carouselText">Lorem Ipsum Lorem Ipsum</h3>
-        <button type="button" class="btn btn-primary btn-lg" id="carouselButton">Large button</button>
-      </div>
+      <div id="overlay-container">
+        <div class="overlay">
+        </div>
+       </div>
+          <%= image_tag("hero-img.jpg", class: "d-block img-fluid bg-overlay", id: "hero", alt: "Two boys at desk.") %>
+          <div class="carousel-caption d-none d-md-block">
+            <h1 id="carouselText">Lorem Ipsum Lorem Ipsum</h1>
+            <div id="envDiv">
+              <button type="button" class="btn" id="env-button">
+                <%= image_tag("envelope-icon.svg", id: "envelope") %>
+              </button>
+           </div>
+
+    <!-- MODAL BUTTON -->
+      <button type="button" class="btn carouselButton" data-toggle="modal" data-target="#formModal">Form Button</button>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="form-content">
+            <form style="color: black">
+              <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+               <h2>Contact Us!</h2>
+                <div class="form-group">
+                  <label for="Name">Name</label>
+                    <input type="name" class="form-control" id="Name" aria-describedby="Namehelp" placeholder="Enter Your Name">
+                      </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6">
+                             <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                              <div class="col-sm-6">
+                                <label for="exampleInputEmail1">Phone Number</label>
+                                <input type="phoneNumber" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="Enter Your Number">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleTextarea">Message</label>
+                              <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="What would you like to say?"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit</button>
+                          </form>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+            </div>
+
+    <div class="carousel-item">
+      <%= image_tag("iStock-1.jpg", class: "d-block img-fluid", alt: "Man and laptop") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("jared-sluyter.jpg", class: "d-block img-fluid", alt: "Child with ice cream smiling") %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag("charles-etoroma.jpg", class: "d-block img-fluid", alt: "Couple smiling") %>
+      <%= image_tag("iStock-2.jpg", class: "d-block img-fluid", alt: "Smartphone icons") %>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<div class="row">
-  <div class="column">
-      <%= image_tag("page-icon.svg") %>
-    <p>Lorem Ipsum</p>
-  </div>
-  <div class="column">
-    <%= image_tag("page-icon.svg") %>
-    <p>Lorem Ipsum</p>
-  </div>
-  <div class="column">
-    <%= image_tag("page-icon.svg") %>
-    <p>Lorem Ipsum</p>
-  </div>
-  <div class="column">
-    <%= image_tag("page-icon.svg") %>
-    <p>Lorem Ipsum</p>
+  <div id="indicatorsDiv">
+    <ol class="carousel-indicators">
+      <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#homepageCarousel" data-slide-to="1"></li>
+      <li data-target="#homepageCarousel" data-slide-to="2"></li>
+    </ol>
   </div>
 </div>
 
-<div class="container">
+
+<!-- PAGE ROWS -->
+
+<div class="row" clas="midRows">
+  <div class="col-6 pageColumns">
+      <%= image_tag("page-icon.svg", class: "page") %>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="col-6 pageColumns">
+    <%= image_tag("page-icon.svg", class: "page") %>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+<div class="row" class="midRows">
+  <div class="col-6 pageColumns">
+    <%= image_tag("page-icon.svg", class: "page") %>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="col-6 pageColumns">
+    <%= image_tag("page-icon.svg", class: "page") %>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+ </div>
+</div>
+
+
+<!-- GRADIENT -->
+<div class="flex-container">
   <%= image_tag("slanted-gradient-background.svg", id: "gradient") %>
-  <div class="gradientText"> <p>Test</p> </div>
+  <div >
+    <p id="gradientText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Quisque malesuada sem eget neque convallis, ac commodo urna congue.
+    </p>
+  </div>
 </div>
+
+<!-- MID-HEADER -->
+<h2 class="header"><span class="orangeLorem">LOREM </span><span class="blackIpsum"> IPSUM</span></h2>
+
+<!-- MID TEXT & BUTTON -->
+
+<div class="row" id="midText">
+  <div class="col-5">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada sem eget neque convallis,
+      ac commodo urna congue. Nulla convallis bibendum elit, sit amet feugiat turpis scelerisque eget.
+      Sed eget eros vestibulum, ornare orci sagittis, venenatis turpis. Ut ullamcorper a odio non ultrices.
+      Aliquam ornare tortor interdum fringilla sagittis. Nulla at vehicula magna.
+    </p>
+  </div>
+  <div class="col-4">
+    <button type="button" class="btn btn-primary btn-lg" id="midButton">Button</button>
+  </div>
+</div>
+
+<!-- PERCENTAGES -->
+
+<div class="row" id="main-row">
+    <div class="col-md-4 numColumn" >
+        <p class="percentages">240%</p>
+        <p class="percentDescription">Lorem ipsum dolor sit amet, wisi tellus lectus, interdum vel dolor mauris</p>
+    </div>
+    <div class="col-md-4 numColumn">
+        <p class="percentages">105%</p>
+        <p class="percentDescription">Lorem ipsum dolor sit amet, wisi tellus lectus, interdum vel dolor mauris</p>
+    </div>
+    <div class="col-md-4 numColumn">
+        <p class="percentages">159%</p>
+        <p class="percentDescription"> Lorem ipsum dolor sit amet, wisi tellus lectus, interdum vel dolor mauris</p>
+    </div>
+</div>
+
+<!-- LOWER-HEADER -->
+<p class="header"><span class="orangeLorem">LOREM </span><span class="blackIpsum"> IPSUM</span></p>
+
+
+<section id="lowerImages">
+
+      <div class="row">
+        <text class="col" id="text">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <h3>Lorem ipsum dolor sit amet lorem</h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Quisque malesuada sem eget neque convallis, ac commodo urna congue. Nulla convallis
+          bibendum elit, sit amet feugiat turpis scelerisque eget. Sed eget eros vestibulum,
+          ornare orci sagittis, venenatis turpis. Ut ullamcorper a odio non ultrices.
+          Aliquam ornare tortor interdum fringilla sagittis.
+        </text>
+        <%= image_tag("img1.jpg", class: "col", class:"imgs", alt: "Woman using smartphone") %>
+      </div>
+      <div class="row">
+        <%= image_tag("img2.jpg", class: "col", class: "imgs", alt: "Graph") %>
+        <text class="col"  id="text">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <h3>Lorem ipsum dolor sit amet lorem</h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Quisque malesuada sem eget neque convallis, ac commodo urna congue. Nulla convallis
+          bibendum elit, sit amet feugiat turpis scelerisque eget. Sed eget eros vestibulum,
+          ornare orci sagittis, venenatis turpis. Ut ullamcorper a odio non ultrices.
+          Aliquam ornare tortor interdum fringilla sagittis.
+      </div>
+    </section>
+
+<footer>
+
+</footer>
