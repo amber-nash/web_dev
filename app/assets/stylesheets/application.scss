@@ -16,67 +16,288 @@
 
 @import "bootstrap";
 
+body {
+  margin: 0;
+  padding:0;
+  font-family: 'Roboto', sans-serif;
+ }
+
+html {
+  margin: 0;
+ }
+
+h2 {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 28px;
+  color: #F36819;
+ }
+
+h3 {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 20px;
+  color: #F7931D;
+ }
+
+p {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+ }
+
+.row {
+  padding: 2%;
+ }
+
+.btn {
+  height: 40px;
+  width: 215px;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-image: linear-gradient(right, #F9CE1A, #F36819);
+  color: white;
+  border-color: #F9CE1A;
+  box-shadow: 3px 3px 5px #A9ADAE;
+  border-radius: 5px;
+ }
 
 #top-bar {
 
   background: #1676DD;
   height: 60px;
-}
-  #top-bar-logo {
-    height: 35px;
-    margin-top: 10px;
-    margin-left: 45%;
-  }
+ }
+
+#top-bar-logo {
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 45%;
+ }
 
 // CAROUSEL
 
-#carouselText{
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 10px;
+ }
 
-  margin-right: 70%;
 
+.carousel-indicators .active {
+    background-color: #283647;
 }
 
-  #carouselButton {
-    margin-right: 70%;
-  }
+
+#indicatorsDiv {
+  position: relative;
+  margin-top: 45px;
+ }
+
+.d-block.img-fluid {
+  height: 509px;
+  width: 1440px;
+ }
+
+
+// OVERLAY
+
+#hero {
+  display: block;
+  width: 1440px;
+  height: 509px;
+ }
+
+.overlay {
+  position: absolute;
+  height: 509px;
+  width: 1440px;
+  opacity: 30%;
+  transition: .5s ease;
+  background: linear-gradient(rgba(243, 104, 25, 0.3), rgba(0, 0, 0, 0.3)), url("hero-img.jpg");
+}
+
+
+#carouselText{
+
+  margin-right: 39%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: white;
+ }
+
+.carouselButton {
+  margin-right: 70%;
+ }
+
+#envDiv {
+  float:right;
+ }
+
+#env-button {
+  height: 40px;
+  width: 50px;
+  border-radius: 5px 00 5px;
+ }
+
+#envelope {
+  margin-left: 0;
+  padding-left: 0;
+ }
+
+//MODAL
+
+.modal-backdrop {
+  background-color: black;
+  z-index: -1;
+ }
+
+.form-content {
+  padding: 5%;
+ }
+
+.form-content.btn {
+  width: 100px !important;
+ }
 
   // COLUMNS
 
-  .row {
-    margin: auto;
-    margin-top: 10%;
-    width: 50%;
-}
-    .column {
-      display: block;
-      margin: auto;
-      width: 50%;
-      padding-right: 5%;
-      padding-left: 10%;
-      padding-bottom: 10%;
-    }
-      p {
-        display: inline-block;
-        margin-left: 20%;
-        margin-right: 5%;
-      }
+.midRows {
+  padding-bottom: 10px;
+  margin-right: 10%;
+  width: 60%;
+ }
+
+
+.page {
+  margin-top: auto;
+	margin-bottom: auto;
+  padding-left: 10%;
+ }
+
+.pageColumns p {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 10px;
+
+ }
+
 
 // GRADIENT
 
 #gradient {
-  margin-left: 0%;
-  padding-left: 0%;
+  margin: 0;
+  width: auto;
+  position: relative;
+  width: 1440px;
 }
 
-.container {
-    margin-left: 0%;
-    position: relative;
-    color: white;
+.flex-container {
+  position: relative;
+  display: flex;
+  color: white;
 }
 
-.gradientText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#gradientText {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  padding-top: 30px;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+
+ }
+
+// HEADERS
+
+.header {
+  margin-left: 42%;
+  padding-top: 10%;
+  padding-bottom: 15px;
+ }
+
+.orangeLorem {
+  display: inline;
+  font-family: "Roboto-Bold", sans-serif !important;
+  font-size: 28px;
+  color: #F36819;
+ }
+
+.blackIpsum {
+  display: inline-block;
+  font-family: "Roboto-Regular", sans-serif !important;
+  font-size: 28px;
+  color: #283647;
+ }
+
+// MIDCOLUMN STYLING
+
+#midText {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  text-align: justify;
+ }
+
+#midButton {
+  margin-top: 10%;
+  margin-left: 20%;
+ }
+
+#percentRows {
+  background-color: red;
+  width: auto;
+ }
+
+.colPercent {
+  width: 20%;
+  margin-left: 10%;
+  }
+
+.numColumn {
+  width: 75%;
+ }
+
+.percentages {
+  font-style: 'Roboto-Bold';
+  font-size: 55px;
+  letter-spacing: 2px;
+  padding-left: 40%;
+ }
+
+.percentDescription {
+  color: #F7931D;
+  text-align: center;
+  margin-left: 35%;
+  width: 45%;
+ }
+
+
+// BOTTOM COLUMNS
+
+#lowerImages {
+  padding-top: 3%;
 }
+
+ #text {
+   margin-left: 7%;
+   margin-right: 5%;
+ }
+
+.imgs {
+  height: 350px;
+  width: 705px;
+  }
+
+footer {
+  margin-top: 10%;
+  background: #0C4078;
+  height: 180px;
+ }
