@@ -157,6 +157,10 @@ p {
   z-index: -1;
  }
 
+ .close {
+   color: white;
+ }
+
 .reg-login-form {
   padding: 5%;
   text-align: center;
@@ -164,6 +168,10 @@ p {
 
  .modal-header {
    padding-left: 35%;
+ }
+
+ .form-text {
+   text-align: center;
  }
 
 .form-content.btn {
