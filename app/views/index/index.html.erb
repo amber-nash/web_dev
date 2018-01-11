@@ -16,42 +16,36 @@
           <div class="carousel-caption d-none d-md-block">
             <h1 id="carouselText">Lorem Ipsum Lorem Ipsum</h1>
             <div id="envDiv">
-              <button type="button" class="btn" id="env-button">
+              <!-- <button type="button" class="btn" id="env-button">
                 <%= image_tag("envelope-icon.svg", id: "envelope") %>
-              </button>
+              </button> -->
            </div>
 
     <!-- MODAL BUTTON -->
       <button type="button" class="btn carouselButton" data-toggle="modal" data-target="#formModal">Form Button</button>
-
+    </div>
     <!-- MODAL -->
     <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="form-content">
-            <form style="color: black">
-              <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-               <h2>Contact Us!</h2>
-                <div class="form-group">
-                  <label for="Name">Name</label>
-                    <input type="name" class="form-control" id="Name" aria-describedby="Namehelp" placeholder="Enter Your Name">
-                      </div>
-                        <div class="form-group row">
-                          <div class="col-sm-6">
-                             <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            </div>
-                              <div class="col-sm-6">
-                                <label for="exampleInputEmail1">Phone Number</label>
-                                <input type="phoneNumber" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="Enter Your Number">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleTextarea">Message</label>
-                              <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="What would you like to say?"></textarea>
-                            </div>
-                            <button type="submit" class="btn">Submit</button>
-                          </form>
+          <h2 class="modal-header">Contact Us</h2>
+          <div class="reg-login-form">
+            <%= form_for @user do |f| %>
+               <%= f.label :name %><br>
+               <%= f.text_field :name %><br>
+               <%= f.label :email %><br>
+               <%= f.text_field :email %><br>
+               <%= f.label :phone %><br>
+               <%= f.text_field :phone %><br>
+               <%= f.label :password %><br>
+               <%= f.password_field :password %><br>
+               <%= f.label :password_confirmation %><br>
+               <%= f.password_field :password_confirmation %><br>
+               <br>
+               <div class="btn">
+               </div>
+            <% end %>
+          </div>
                         </div>
                      </div>
                    </div>

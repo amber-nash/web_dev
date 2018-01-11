@@ -157,8 +157,13 @@ p {
   z-index: -1;
  }
 
-.form-content {
+.reg-login-form {
   padding: 5%;
+  text-align: center;
+ }
+
+ .modal-header {
+   padding-left: 35%;
  }
 
 .form-content.btn {
